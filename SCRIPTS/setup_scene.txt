@@ -1,0 +1,6 @@
+change:
+ resolution project to 256x144
+ Rendering textures from linear to nearest
+ window stretch mode: canvas
+
+ input map for player

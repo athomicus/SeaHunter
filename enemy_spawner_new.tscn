@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://du4i8qr75q4eo"]
+
+[ext_resource type="Script" path="res://SCRIPTS/enemy_spawner_new.gd" id="1_q1eu7"]
+
+[node name="EnemySpawner_new" type="Node2D"]
+script = ExtResource("1_q1eu7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="Left" type="Node2D" parent="."]
+
+[node name="1" type="Marker2D" parent="Left"]
+position = Vector2(-32, 77)
+
+[node name="2" type="Marker2D" parent="Left"]
+position = Vector2(-32, 109)
+
+[node name="3" type="Marker2D" parent="Left"]
+position = Vector2(-32, 135)
+
+[node name="4" type="Marker2D" parent="Left"]
+position = Vector2(-32, 177)
+
+[node name="Right" type="Node2D" parent="."]
+
+[node name="1" type="Marker2D" parent="Right"]
+position = Vector2(290, 73)
+
+[node name="2" type="Marker2D" parent="Right"]
+position = Vector2(290, 105)
+
+[node name="3" type="Marker2D" parent="Right"]
+position = Vector2(290, 131)
+
+[node name="4" type="Marker2D" parent="Right"]
+position = Vector2(290, 173)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
